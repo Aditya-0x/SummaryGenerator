@@ -86,7 +86,7 @@ class SummarizeRequest(BaseModel):
     min_new_tokens: int = 30
     num_beams: int = 4
     length_penalty: float = 1.5     # >1 encourages longer, more complete summaries
-    gemini_model: str = "gemini-2.5-flash"
+    gemini_model: str = "gemini-3.0-flash"
     polish: bool = False            # if True, run Gemini to clean up BART's output
 
 
