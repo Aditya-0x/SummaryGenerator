@@ -317,7 +317,7 @@ if (btnSummarize) {
 
         try {
         const body = engine === 'gemini'
-                ? { text, engine: 'gemini', gemini_model: 'gemini-3.0-flash' }
+                ? { text, engine: 'gemini', gemini_model: 'gemini-2.5-flash' }
                 : {
                     text,
                     engine: 'bart',
@@ -326,7 +326,7 @@ if (btnSummarize) {
                     num_beams: preset.num_beams,
                     length_penalty: preset.length_penalty,
                     polish: polishEnabled,
-                    gemini_model: 'gemini-3.0-flash',
+                    gemini_model: 'gemini-2.5-flash',
                 };
 
             const res = await fetch('/api/summarize', {
